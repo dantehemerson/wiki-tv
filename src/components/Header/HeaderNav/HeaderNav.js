@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+import './HeaderNav.css';
+
+// Logo for navbar-brand
+import logo from '../../../images/wikitv_logo_light.png';
+
 
 class HeaderNav extends Component {
 
@@ -40,12 +45,12 @@ class HeaderNav extends Component {
 
 	render() {
 		return(
-			<div className="has-background-success">
+			<div className="has-background-dark">
 				<div className="container">
-					<nav className="navbar is-success">
+					<nav className="navbar is-dark">
 						<div className="navbar-brand">
 							<a className="navbar-item" href="/">
-								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/TV_Tokyo_logo_20110629.svg/1200px-TV_Tokyo_logo_20110629.svg.png" alt="Wiki Tv: Find movies and series"/>
+								<img className="logo-navbar" src={logo} alt="Wiki Tv: Find movies and series" alt="Wiki TV Logo"/>
 							</a>
 							<div className="navbar-burger burger" role="button" data-target="navMenu" aria-expanded="false">
 							    <span></span>
