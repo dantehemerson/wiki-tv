@@ -1,0 +1,27 @@
+/** CUSTOMIZING BULMA **/
+@import "bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/functions";
+
+	// Setup your Custom Colors
+	$purple: hsl(275,87%,45%);
+	$purple-invert: findColorInvert($purple);
+
+
+// Add new color variables to the color map.
+@import "bulma/sass/utilities/derived-variables.sass";
+
+	$addColors: (
+	  "purple":($purple, $purple-invert),
+	);
+	$colors: map-merge($colors, $addColors);
+
+/** END CUSTOMIZATION **/
+
+
+@import "bulma/bulma";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
