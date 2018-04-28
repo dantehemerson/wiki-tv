@@ -50,7 +50,7 @@ class HeaderNav extends Component {
 					<nav className="navbar is-dark">
 						<div className="navbar-brand">
 							<a className="navbar-item" href="/">
-								<img className="logo-navbar" src={logo} alt="Wiki Tv: Find movies and series" alt="Wiki TV Logo"/>
+								<img className="logo-navbar" src={logo} alt="Wiki Tv: Find movies and series"/>
 							</a>
 							<div className="navbar-burger burger" role="button" data-target="navMenu" aria-expanded="false">
 							    <span></span>
@@ -68,7 +68,7 @@ class HeaderNav extends Component {
 					</nav>
 				</div>
 			</div>
-			);
+		);
 	}
 }
 

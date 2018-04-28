@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
+import Discover from '../Discover/Discover';
+
 import './App.css';
 
 class App extends Component {
@@ -10,6 +12,7 @@ class App extends Component {
     return (
       <div >
         <Header/>
+        <Discover/>
         <Footer/>
       </div>
     );

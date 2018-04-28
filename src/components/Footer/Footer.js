@@ -9,7 +9,7 @@ function Footer(props) {
 				<p>&copy; 2018 - <a className="has-text-primary has-text-weight-semibold" href="https://twitter.com/dantehemerson">Dante Calderón</a></p>
 			</div>
 		</footer>
-		);
+	);
 }
 
 
