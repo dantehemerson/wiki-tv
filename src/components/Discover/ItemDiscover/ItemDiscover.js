@@ -17,12 +17,9 @@ class ItemDiscover extends Component {
 					<div className="media-content">
 				    	<p className="title is-4">{ data.title }</p>
 				    </div>
-			      	<time dateTime="2016-1-1">1 Jan 2016</time>
+			      	<time dateTime={data.release_date}>{data.release_date}</time>
 				    <div className="content">
-				      	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				      	Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-				      	<a href="#">#css</a> <a href="#">#responsive</a>
-				      	<br/>
+				    	{ data.overview.substr(0, 100) + "..." }
 				    </div>			    			    
 				</div>
 				
