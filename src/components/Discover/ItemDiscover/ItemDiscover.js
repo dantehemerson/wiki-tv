@@ -4,7 +4,7 @@ class ItemDiscover extends Component {
 
 	render() {
 		return(
-			<div className="column is-4">
+			<div className="column is-half-mobile is-4-tablet is-3-desktop">
 			<div className="card">
 				<div className="card-image">
 					<figure className="image is-2by3">
