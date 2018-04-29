@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 class ItemDiscover extends Component {
 
@@ -8,14 +9,19 @@ class ItemDiscover extends Component {
 
 			<div className="column is-half-mobile is-4-tablet is-3-desktop">
 			<div className="card">
+
 				<div className="card-image">
-					<figure className="image is-2by3">
-						<img src={data.poster_path === null ? 'http://via.placeholder.com/300x450' : `https://image.tmdb.org/t/p/w300/${data.poster_path}`} alt="Imagen de la pelicula"/>
-					</figure>
+					<Link to={`/movie/${ data.id }`}>
+						<figure className="image is-2by3">
+							<img src={data.poster_path === null ? 'http://via.placeholder.com/300x450' : `https://image.tmdb.org/t/p/w300/${data.poster_path}`} alt="Imagen de la pelicula"/>
+						</figure>
+					</Link>
 				</div>
 				<div className="card-content">
 					<div className="media-content">
-				    	<p className="title is-4">{ data.title }</p>
+						<Link  to={`/movie/${ data.id }`}>
+				    		<span className="title is-4">{ data.title }</span>
+				    	</Link>
 				    </div>
 			      	<time dateTime={data.release_date}>{data.release_date}</time>
 				    <div className="content">
