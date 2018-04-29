@@ -1,0 +1,11 @@
+.backdrop {
+	background-position: center;
+	background-size: cover;
+}
+.backdrop .backdrop-backcolor {
+	background-color: #00000091;
+}
+
+.movie-container {
+	padding: 30px 0;
+}

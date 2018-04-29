@@ -36,6 +36,7 @@ class Movie extends Component {
 					const movie = data;
 					this.setState({ movie });
 					console.log(this.state.movie)
+
 				});
 			})
 			.catch(err => {
@@ -48,31 +49,37 @@ class Movie extends Component {
 	  this.getData();
 	}
 
-	render() {
+	getBackdropImage() {
+
+	}
+
+	render() {		
 		return(
 			<div>
-				<div className="backdrop">
-					<div className="container">
-						<div className="columns is-centered">
-							<div className="column is-4">
-								<figure className="image is-2by3">
-									<img src={this.state.movie.poster_path === null ? 'http://via.placeholder.com/300x450' : `https://image.tmdb.org/t/p/w300/${this.state.movie.poster_path}`} alt="Imagen de la pelicula"/>
-								</figure>
-							</div>
-							<div className="column">
-								<h1 className="title ">{ this.state.movie.title }</h1>	
+				<div className="backdrop" style={ this.state.movie.backdrop_path ? {backgroundImage: `url(https://image.tmdb.org/t/p/w780/${this.state.movie.backdrop_path}`} : {backgroundImage: `https://www.laprensagrafica.com/__export/1519481573255/sites/prensagrafica/img/2018/02/24/rachel_crop1519481522365.jpg_525981578.jpg`} }>
+					<div className="backdrop-backcolor">
+						<div className="container movie-container">					
+							<div className="columns is-centered">
+								<div className="column is-4">
+									<figure className="image is-2by3">
+										<img src={this.state.movie.poster_path === null ? 'http://via.placeholder.com/300x450' : `https://image.tmdb.org/t/p/w300/${this.state.movie.poster_path}`} alt="Imagen de la pelicula"/>
+									</figure>
+								</div>
+								<div className="column">
+									<h1 className="title ">{ this.state.movie.title }</h1>	
 
-								<div className="place">
-									<h2 className="title is-4">General</h2>
-									<p>{ this.state.movie.overview }</p>
-								</div>							
-								
+									<div className="place">
+										<h2 className="title is-4">General</h2>
+										<p>{ this.state.movie.overview }</p>
+									</div>							
+									
+								</div>
 							</div>
 						</div>
-						<Cast cast={this.state.movie.credits.cast }/>
-
-
 					</div>
+				</div>
+				<div className="container">
+					<Cast cast={this.state.movie.credits.cast }/>
 				</div>
 			</div>
 		);
