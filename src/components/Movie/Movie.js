@@ -77,7 +77,34 @@ class Movie extends Component {
 										<h2 className="title is-4">General</h2>
 										<p>{ this.state.movie.overview ? this.state.movie.overview : 'Lo sentimos, no tenemos una descripcion disponible.' }</p>
 									</div>							
-									
+									<hr/>
+									<div className="data-overview">
+										<h3>
+											<strong>Release Date: </strong>
+											<time dateTime={this.state.movie.release_date}>
+												{this.state.movie.release_date}
+											</time>
+										</h3>
+										<h3>
+											<strong>Rating : </strong>
+											{this.state.movie.vote_average}
+										</h3>
+										<div>
+											<h3>
+												<strong>Genres: </strong>
+												{
+													this.state.movie.genres.map((element, index) => {
+														if(index < this.state.movie.genres.length - 1) {
+											        return this.state.movie.genres[index].name + ', ';
+											      }else {
+								              return this.state.movie.genres[index].name;
+											      }
+													})
+												}
+											</h3>
+										</div>
+									</div>
+									<a href="#full-info-movie" className="title is-7">View Full Data>></a>
 								</div>
 							</div>
 						</div>
@@ -85,6 +112,9 @@ class Movie extends Component {
 				</div>
 				<div className="container">
 					<Cast cast={this.state.movie.credits.cast }/>
+				</div>
+				<div id="full-info-movie" className="full-info-movie">
+					FULL INFORMATION
 				</div>
 			</div>
 		);

@@ -10,7 +10,7 @@ class CastItem extends Component {
 				<div className="card cast-item-card">
 					<div className="card-image">
 					    <figure className="image is-2by3">
-					    	<img src={this.props.data.profile_path ? link + this.props.data.profile_path : 'http://via.placeholder.com/300x450'}  alt="Placeholder image"/>
+					    	<img src={this.props.data.profile_path ? link + this.props.data.profile_path : 'http://via.placeholder.com/300x450'}  alt={this.props.data.name}/>
 					    </figure>
 					</div>
 					<div className="card-content">
