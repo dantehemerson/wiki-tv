@@ -42,8 +42,7 @@ class Movies extends Component {
 				<div className="container">
 					<div className="columns is-multiline is-centered is-mobile column-items">
 						{
-							this.state.movies.map((movie, index) => {
-								console.log(movie);
+							this.state.movies.map((movie, index) => {								
 								return(
 									<ItemDiscover data={ movie } key={ index } />
 								);
