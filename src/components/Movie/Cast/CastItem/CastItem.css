@@ -1,0 +1,8 @@
+.cast-item-card {
+	height: 100%;
+}
+
+.cast-item-card .card-content {
+	padding: 0.7rem 0.5rem;
+	transition: all 1s;
+}

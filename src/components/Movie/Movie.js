@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Cast from './Cast/Cast';
 
 import './Movie.css';
 
@@ -24,7 +25,7 @@ class Movie extends Component {
 		const key = '954c577b7ec500b5c660c0212e03029f';		
 		const id = this.props.match.params.id;
 
-		fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${key}&language=en-US&append_to_response=credits`)
+		fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${key}&language=es&append_to_response=credits`)
 			.then(response => {
 				if(response.status !== 200) {
 					console.log('Error: ' + response.status);
@@ -60,9 +61,15 @@ class Movie extends Component {
 							</div>
 							<div className="column">
 								<h1 className="title ">{ this.state.movie.title }</h1>	
+
+								<div className="place">
+									<h2 className="title is-4">General</h2>
+									<p>{ this.state.movie.overview }</p>
+								</div>							
 								
 							</div>
 						</div>
+						<Cast cast={this.state.movie.credits.cast }/>
 
 
 					</div>
