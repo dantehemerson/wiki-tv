@@ -1,0 +1,33 @@
+.col-item-discover {
+	padding: 0px 0 ;
+}
+	.card-item-discover {
+		height: 100%;
+		border-radius: 0px;
+	}
+
+		.card-item-discover .card-content {
+			padding: .5rem .8rem 2rem .8rem;
+		}
+
+		.card-item-discover .card-image figure {
+			position: relative;
+			overflow: hidden;
+		}
+		.card-item-discover .card-image img {	
+			transition: all .4s;
+			border-radius: 0px 0px 0 0;
+		}
+		.card-item-discover .card-image img:hover {	
+			
+		  	transform: scale(1.05);  
+		}
+
+
+		.card-item-discover .title {
+			transition: all .4s;
+		}
+		.card-item-discover .title:hover {
+			color: #D33D40;
+			text-decoration: underline;
+		}

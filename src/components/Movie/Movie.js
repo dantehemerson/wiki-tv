@@ -46,7 +46,9 @@ class Movie extends Component {
 	}
 
 	componentDidMount() {
-	  this.getData();
+	  	this.getData();
+    	window.scrollTo(0, 0);
+
 	}
 
 	getBackdropImage() {

@@ -17,7 +17,7 @@ ReactDOM.render(
 		<App>	
 			<Switch>
 				<Route exact path="/" component={ Discover }/>
-				<Route exact path="/movie/:id" component={ Movie }/>
+				<Route path="/movie/:id" component={ Movie }/>
 			</Switch>
 		</App>
 	</BrowserRouter>
