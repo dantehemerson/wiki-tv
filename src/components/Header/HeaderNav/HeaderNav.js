@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import {Link} from 'react-router-dom';
+
+
 import './HeaderNav.css';
 
 // Logo for navbar-brand
@@ -49,9 +52,9 @@ class HeaderNav extends Component {
 				<div className="container">
 					<nav className="navbar is-dark">
 						<div className="navbar-brand">
-							<a className="navbar-item" href="/">
+							<Link to="/" className="navbar-item">
 								<img className="logo-navbar" src={logo} alt="Wiki Tv: Find movies and series"/>
-							</a>
+							</Link>
 							<div className="navbar-burger burger" role="button" data-target="navMenu" aria-expanded="false">
 							    <span></span>
 							    <span></span>
