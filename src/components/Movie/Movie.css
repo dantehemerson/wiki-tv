@@ -11,8 +11,14 @@
 }
 
 	.movie-data-header * {
-		color: white;
+		color: white;		
+	}
+
+	.movie-data-header {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
 
+.poster-movie {
+	
+}
