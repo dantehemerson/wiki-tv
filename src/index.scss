@@ -34,7 +34,7 @@
 }
 
 
-$translationY: 40px;
+$translationY: 30px;
 
 // Animaciones transiciones
 .fade-enter {
@@ -46,7 +46,7 @@ $translationY: 40px;
 .fade-enter.fade-enter-active {
 	opacity: 1;
 
-  transition: all 450ms ease-in;
+  transition: all 400ms ease-in-out;
   transform: translate(0, 0); 
   
 }
@@ -62,7 +62,7 @@ $translationY: 40px;
 
 .fade-exit.fade-exit-active {
 	opacity: 0.1;
-  	transition: all 450ms ease-in;	
+  	transition: all 400ms ease-in-out;	
 	transform: translate(0, $translationY); 
 }
 
