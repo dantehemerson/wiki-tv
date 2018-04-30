@@ -32,3 +32,15 @@
 	background-color: #f9f9f9
 	
 }
+
+// Animaciones transiciones
+.fade-enter {
+  opacity: 0.01;
+  
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 750ms ease-in;
+}
+
