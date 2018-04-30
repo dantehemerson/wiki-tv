@@ -113,6 +113,7 @@ class Movie extends Component {
 				<div className="container">
 					<Cast cast={this.state.movie.credits.cast }/>
 				</div>
+				
 				<div id="full-info-movie" className="full-info-movie">
 					FULL INFORMATION
 				</div>
