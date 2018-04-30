@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Cast from './Cast/Cast';
 import Information from './Information/Information';
+import CircularPercentage from './CircularPercentage/CircularPercentage';
 
 import './Movie.css';
 
@@ -75,6 +76,9 @@ class Movie extends Component {
 								<div className="column movie-data-header is-10-mobile">
 									<h1 className="title is-2 is-hidden-mobile">{ this.state.movie.title }</h1>	
 
+
+
+									<CircularPercentage/>
 									<div className="place">
 										<h2 className="title is-4">General</h2>
 										<p>{ this.state.movie.overview ? this.state.movie.overview : 'Lo sentimos, no tenemos una descripcion disponible.' }</p>
@@ -86,7 +90,6 @@ class Movie extends Component {
 											{this.state.movie.vote_average}
 										</h3>										
 									</div>
-									<a href="#full-info-movie" className="title is-7">View Full Data>></a>
 								</div>
 							</div>
 						</div>
@@ -97,13 +100,9 @@ class Movie extends Component {
 						<div className="column is-12-mobile is-7-tablet is-7-desktop ">
 							<Cast cast={this.state.movie.credits.cast }/>
 						</div>
-
 						<div className="column is-10-mobile is-5-tablet is-5-desktop   ">
 							<Information movie={this.state.movie}/>
 						</div>
-						
-
-
 					</div>
 				</div>
 
