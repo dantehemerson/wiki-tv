@@ -33,14 +33,40 @@
 	
 }
 
+
+$translationY: 40px;
+
 // Animaciones transiciones
 .fade-enter {
-  opacity: 0.01;
-  
+	opacity: 0;
+  	transform: translate(0, $translationY);  
+ 
 }
 
 .fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 750ms ease-in;
+	opacity: 1;
+
+  transition: all 450ms ease-in;
+  transform: translate(0, 0); 
+  
+}
+
+.fade-enter-done {
+	
+}
+
+.fade-exit {
+	opacity: 1;
+	transform: translate(0, 0); 
+}
+
+.fade-exit.fade-exit-active {
+	opacity: 0.1;
+  	transition: all 450ms ease-in;	
+	transform: translate(0, $translationY); 
+}
+
+.fade-exit-done {
+
 }
 

@@ -11,7 +11,7 @@ class Movies extends Component {
 		this.state = {
 			movies: [],
 			sortBy: 'popularity.desc',
-			page: 8
+			page: 23
 		}
 	}
 
@@ -38,7 +38,7 @@ class Movies extends Component {
 
 	render() {
 		return(
-			<div>				
+				<div>
 				<div className="container">
 					<div className="columns is-multiline is-centered is-mobile column-items">
 						{
@@ -50,7 +50,8 @@ class Movies extends Component {
 						}
 					</div>
 				</div>
-			</div>
+				</div>
+
 		);
 	}
 }

@@ -6,8 +6,7 @@ class Discover extends Component {
 
 	render() {
 		return (
-			<div>
-				
+			<div>				
 				<Movies/>
 			</div>
 		);

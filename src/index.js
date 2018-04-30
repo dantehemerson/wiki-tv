@@ -20,12 +20,13 @@ ReactDOM.render(
 		<Route render={({ location }) => (
 			<App>	
 				<TransitionGroup>
-					<CSSTransition key={location.key} timeout={500} classNames="fade">
+					<CSSTransition key={location.key} timeout={450} classNames="fade">
 						<Switch location={location}>
 							<Route exact path="/" component={ Discover }/>
 							<Route path="/movie/:id" component={ Movie }/>
 						</Switch>
 					</CSSTransition>
+					
 				</TransitionGroup>
 			</App>
 			)}

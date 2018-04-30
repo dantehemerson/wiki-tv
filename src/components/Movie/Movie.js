@@ -60,8 +60,9 @@ class Movie extends Component {
 	render() {		
 
 		return(
-			<div>
-				<div className="backdrop" style={ this.state.movie.backdrop_path ? {backgroundImage: `url(https://image.tmdb.org/t/p/w1400_and_h450_face/${this.state.movie.backdrop_path}`} : {backgroundImage: `https://www.laprensagrafica.com/__export/1519481573255/sites/prensagrafica/img/2018/02/24/rachel_crop1519481522365.jpg_525981578.jpg`} }>
+			<div >
+				
+				<div className="backdrop" style={this.state.movie.backdrop_path ? {backgroundImage: `url(https://image.tmdb.org/t/p/w1400_and_h450_face/${this.state.movie.backdrop_path}`} : {backgroundImage: `https://www.laprensagrafica.com/__export/1519481573255/sites/prensagrafica/img/2018/02/24/rachel_crop1519481522365.jpg_525981578.jpg` } }>
 					<div className="backdrop-backcolor">
 						<div className="container movie-container">					
 							<div className="columns is-centered is-multiline is-mobile">
@@ -99,9 +100,8 @@ class Movie extends Component {
 						</div>
 					</div>
 				</div>
-
-
 			</div>
+
 		);
 	}
 }
