@@ -11,7 +11,7 @@ class Movies extends Component {
 		this.state = {
 			movies: [],
 			sortBy: 'popularity.desc',
-			page: 3
+			page: 8
 		}
 	}
 

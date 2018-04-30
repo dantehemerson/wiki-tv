@@ -1,7 +1,9 @@
 .backdrop {
 	background-position: center;
 	background-size: cover;
+    background-repeat: no-repeat;    
 }
+
 .backdrop .backdrop-backcolor {
 	background-color: #000000a3;
 }

@@ -20,9 +20,10 @@ class CircularPercentage extends Component {
 		let count = document.getElementById('count');
 		let progress = document.getElementById('progress');
 
-		let percentage = 90;
+		let percentage = this.props.percentage;
+		console.log(percentage)
 
-		let total = Math.floor((250 * percentage)/100);
+		let total = Math.round((250 * percentage)/100);
 
 		let currentPercentage = 0;
 
@@ -32,7 +33,7 @@ class CircularPercentage extends Component {
 				clearInterval(id);
 			} else {				
 				progress.setAttribute('stroke-dasharray', `${i},251.2`);
-				currentPercentage = Math.floor((i * 100)/251.2) + 1;
+				currentPercentage = Math.round((i * 100)/251.2) + 1;
 				count.innerHTML = `${currentPercentage}`;
 				
 			}
