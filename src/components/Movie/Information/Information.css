@@ -1,0 +1,20 @@
+.info-container {
+	background: #efefef;	
+	padding: 30px 20px;
+	border-radius: 5px;
+}
+
+.info-container .title {
+	margin-bottom: 0rem;
+}
+.info-container hr {
+	background-color: #cccccc;
+	margin-top: .6rem;
+	margin-bottom: 1.7rem;
+}
+.info-container li {
+	padding: .4rem 0;
+}
+.columns.info-container.column-padding {
+	margin: 40px 20px;
+}

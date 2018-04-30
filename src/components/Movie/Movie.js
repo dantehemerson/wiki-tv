@@ -57,6 +57,7 @@ class Movie extends Component {
 	}
 
 	render() {		
+
 		return(
 			<div>
 				<div className="backdrop" style={ this.state.movie.backdrop_path ? {backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${this.state.movie.backdrop_path}`} : {backgroundImage: `https://www.laprensagrafica.com/__export/1519481573255/sites/prensagrafica/img/2018/02/24/rachel_crop1519481522365.jpg_525981578.jpg`} }>
@@ -81,29 +82,9 @@ class Movie extends Component {
 									<hr/>
 									<div className="data-overview">
 										<h3>
-											<strong>Release Date: </strong>
-											<time dateTime={this.state.movie.release_date}>
-												{this.state.movie.release_date}
-											</time>
-										</h3>
-										<h3>
 											<strong>Rating : </strong>
 											{this.state.movie.vote_average}
-										</h3>
-										<div>
-											<h3>
-												<strong>Genres: </strong>
-												{
-													this.state.movie.genres.map((element, index) => {
-														if(index < this.state.movie.genres.length - 1) {
-											        return this.state.movie.genres[index].name + ', ';
-											      }else {
-								              return this.state.movie.genres[index].name;
-											      }
-													})
-												}
-											</h3>
-										</div>
+										</h3>										
 									</div>
 									<a href="#full-info-movie" className="title is-7">View Full Data>></a>
 								</div>
@@ -112,10 +93,21 @@ class Movie extends Component {
 					</div>
 				</div>
 				<div className="container">
-					<Cast cast={this.state.movie.credits.cast }/>
+					<div className="columns is-centered is-multiline is-mobile">
+						<div className="column is-12-mobile is-7-tablet is-7-desktop ">
+							<Cast cast={this.state.movie.credits.cast }/>
+						</div>
+
+						<div className="column is-10-mobile is-5-tablet is-5-desktop   ">
+							<Information movie={this.state.movie}/>
+						</div>
+						
+
+
+					</div>
 				</div>
 
-				<Information movie={this.state.movie}/>
+
 			</div>
 		);
 	}

@@ -6,7 +6,7 @@ class CastItem extends Component {
 	render() {
 		const link = 'https://image.tmdb.org/t/p/w300';
 		return(
-			<div className="column is-4-mobile is-3-tablet is-2-desktop">
+			<div className="column is-4-mobile is-half-tablet is-4-desktop is-3-widescreen">
 				<div className="card cast-item-card">
 					<div className="card-image">
 					    <figure className="image is-2by3">
