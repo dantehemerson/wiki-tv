@@ -25,3 +25,15 @@
 	border-radius:5px;
 	box-shadow: 0px 0px 5px black;
 }
+
+
+.action-buttons {
+	display: flex;
+}
+
+	.title-circular-percentage {
+		display: flex;
+		align-items: center;
+		padding-left: 7px;
+	}
+

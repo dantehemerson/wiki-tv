@@ -43,23 +43,19 @@ class CircularPercentage extends Component {
 
 	render() {
 		return( 	
-			<div>		
-				<svg id="animated" viewBox="0 0 100 100">
-				  <circle cx="50" cy="50" r="50" fill="#0d8a54"/>
-				  <path id="progress" strokeLinecap="round" strokeWidth="10" stroke="#fff" fill="none" strokeDasharray="0, 251.2" 
-				        d="M50 10
-				           a 40 40 0 0 1 0 80
-				           a 40 40 0 0 1 0 -80">
-				  </path>
-				  <text id="count" x="48" y="55" textAnchor="middle" dy="7" fontSize="2.3rem" fill="white" style={{fontWeight: "bold"}}>0				  	
-				  </text>
-				  <text id="count" x="75" y="40" textAnchor="middle" dy="7" fontSize="15px" fill="white">%
-				  </text>
-				  
-				</svg>
-			</div>
-
-
+			<svg id="animated" viewBox="0 0 100 100">
+			  <circle cx="50" cy="50" r="50" fill="#0d8a54"/>
+			  <path id="progress" strokeLinecap="round" strokeWidth="10" stroke="#fff" fill="none" strokeDasharray="0, 251.2" 
+			        d="M50 10
+			           a 40 40 0 0 1 0 80
+			           a 40 40 0 0 1 0 -80">
+			  </path>
+			  <text id="count" x="48" y="55" textAnchor="middle" dy="7" fontSize="2.3rem" fill="white" style={{fontWeight: "bold"}}>0				  	
+			  </text>
+			  <text id="count" x="75" y="40" textAnchor="middle" dy="7" fontSize="15px" fill="white">%
+			  </text>
+			  
+			</svg>
 		);
 	}
 }

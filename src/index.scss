@@ -34,7 +34,7 @@
 }
 
 
-$translationY: 30px;
+$translationY: 20px;
 
 // Animaciones transiciones
 .fade-enter {
@@ -45,7 +45,7 @@ $translationY: 30px;
 
 .fade-enter.fade-enter-active {
 	opacity: 1;
-
+	
   transition: all 400ms ease-in-out;
   transform: translate(0, 0); 
   
@@ -55,16 +55,18 @@ $translationY: 30px;
 	
 }
 
-.fade-exit {
-	opacity: 1;
-	transform: translate(0, 0); 
-}
+// No funciona por que la paginas se superponen, haria falta agregar position absolute
+// .fade-exit {
+// 	opacity: 1;
+// 	transform: translate(0, 0); 
+// }
 
-.fade-exit.fade-exit-active {
-	opacity: 0.1;
-  	transition: all 400ms ease-in-out;	
-	transform: translate(0, $translationY); 
-}
+// .fade-exit.fade-exit-active {
+// 	opacity: 0.1;
+//   	transition: all 400ms ease-in-out;	
+// 	transform: translate(0, $translationY); 
+// }
+
 
 .fade-exit-done {
 

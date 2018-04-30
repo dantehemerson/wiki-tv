@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import Cast from './Cast/Cast';
 import Information from './Information/Information';
-import CircularPercentage from './CircularPercentage/CircularPercentage';
+import ActionButtons from './ActionButtons/ActionButtons';
+
 
 import './Movie.css';
 
@@ -78,13 +79,12 @@ class Movie extends Component {
 									<h1 className="title is-2 is-hidden-mobile">{ this.state.movie.title }</h1>	
 
 
+									<ActionButtons percentage={this.state.movie.vote_average}/>
 
-									<CircularPercentage percentage={this.state.movie.vote_average * 10}/>
 									<div className="place">
 										<h2 className="title is-4">General</h2>
 										<p>{ this.state.movie.overview ? this.state.movie.overview : 'Lo sentimos, no tenemos una descripcion disponible.' }</p>
 									</div>							
-									<hr/>								
 								</div>
 							</div>
 						</div>

@@ -11,7 +11,7 @@ class Movies extends Component {
 		this.state = {
 			movies: [],
 			sortBy: 'popularity.desc',
-			page: 23
+			page: 13
 		}
 	}
 
@@ -39,17 +39,17 @@ class Movies extends Component {
 	render() {
 		return(
 				<div>
-				<div className="container">
-					<div className="columns is-multiline is-centered is-mobile column-items">
-						{
-							this.state.movies.map((movie, index) => {								
-								return(
-									<ItemDiscover data={ movie } key={ index } />
-								);
-							})
-						}
+					<div className="container">
+						<div className="columns is-multiline is-centered is-mobile column-items">
+							{
+								this.state.movies.map((movie, index) => {								
+									return(
+										<ItemDiscover data={ movie } key={ index } />
+									);
+								})
+							}
+						</div>
 					</div>
-				</div>
 				</div>
 
 		);
