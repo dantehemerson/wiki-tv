@@ -18,6 +18,14 @@ class ActionButtons extends Component {
 							Puntuación <br/>de<br/> usuario
 						</strong>
 				</div>
+				<div className="favorite-button-container">
+					<a className="material-icons md-24">favorite
+					</a>
+					<span className="tooltip-container">
+						<span className="tooltip">Añadir&nbsp;a&nbsp;mis&nbsp;favoritos</span>
+					</span>
+
+				</div>	
 			</div>
 		);
 	}
