@@ -52,7 +52,7 @@ class HeaderNav extends Component {
 				<div className="container">
 					<nav className="navbar is-dark">
 						<div className="navbar-brand">
-							<Link to="/" className="navbar-item">
+							<Link to={`${process.env.PUBLIC_URL}/`} className="navbar-item">
 								<img className="logo-navbar" src={logo} alt="Wiki Tv: Find movies and series"/>
 							</Link>
 							<div className="navbar-burger burger" role="button" data-target="navMenu" aria-expanded="false">

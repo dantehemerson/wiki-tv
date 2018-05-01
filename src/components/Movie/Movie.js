@@ -58,8 +58,7 @@ class Movie extends Component {
 
 	}
 
-	render() {		
-
+	render() {				
 		return(
 			<div >
 				
