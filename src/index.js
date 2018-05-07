@@ -22,8 +22,8 @@ ReactDOM.render(
 				<TransitionGroup>
 					<CSSTransition key={location.key} timeout={450} classNames="fade">
 						<Switch location={location}>
-							<Route exact path={`${process.env.PUBLIC_URL}/`} component={ Discover }/>
-							<Route path={`${process.env.PUBLIC_URL}/movie/:id`} component={ Movie }/>
+							<Route exact path='/' component={ Discover }/>
+							<Route path='/movie/:id' component={ Movie }/>
 						</Switch>
 					</CSSTransition>
 					
@@ -42,6 +42,7 @@ ReactDOM.render(
 	 	Cuando no este en localhost entonces no ejecuta el serviceworker
 
 	*/ 	
+
 	if(Boolean(
 	  window.location.hostname === 'localhost' ||
 	    // [::1] is the IPv6 localhost address.
