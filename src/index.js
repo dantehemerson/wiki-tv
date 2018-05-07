@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 // Estilos globales para toda la aplicacion
@@ -16,7 +16,7 @@ import Movie from './components/Movie/Movie';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-	<BrowserRouter>
+	<HashRouter>
 		<Route render={({ location }) => (
 			<App>	
 				<TransitionGroup>
@@ -31,7 +31,7 @@ ReactDOM.render(
 			</App>
 			)}
 		/>
-	</BrowserRouter>
+	</HashRouter>
 	, document.getElementById('root')
 );
 
