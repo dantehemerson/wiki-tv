@@ -8,7 +8,6 @@ class ItemDiscover extends Component {
 	render() {
 		let data = this.props.data;
 		return(
-
 			<div className="column is-half-mobile is-4-tablet is-3-desktop col-item-discover">
 				<div className="card card-item-discover">
 
