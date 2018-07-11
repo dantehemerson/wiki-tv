@@ -11,10 +11,6 @@ import App from './components/App/App';
 import Discover from './components/Discover/Discover';
 import Movie from './components/Movie/Movie';
 
-
-
-
-
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
