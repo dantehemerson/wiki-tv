@@ -41,7 +41,7 @@ var suma = function(number){
       result += i
    }
    return result
-}// Fin de la función suma
+}// Fin de la función suma blablabla
 
 (function() {
 	/** Mi pagina web actualmente no es https, por lo cual no funcionara 
