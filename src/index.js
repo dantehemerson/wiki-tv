@@ -34,6 +34,13 @@ ReactDOM.render(
 );
 
 
+
+var hola = function(number){
+	if(number === 1) {
+		return 0;
+	}
+}
+
 (function() {
 	/** Mi pagina web actualmente no es https, por lo cual no funcionara 
 	 	Los service workers. So, lo ejecutare solo cuando este en localhost(la verdad aun no utilizo serviceworkers, pero detodas maneras lo dejare asi).
