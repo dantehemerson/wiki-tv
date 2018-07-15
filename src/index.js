@@ -33,16 +33,6 @@ ReactDOM.render(
 	, document.getElementById('root')
 );
 
-
-// No tiene ni ide ade lo que está haciendo
-var suma = function(number){
-   let result = 0;
-   for(let i = 0; i < number; i++) {
-      result += i
-   }
-   return result
-}// Fin de la función suma blablabla
-
 (function() {
 	/** Mi pagina web actualmente no es https, por lo cual no funcionara 
 	 	Los service workers. So, lo ejecutare solo cuando este en localhost(la verdad aun no utilizo serviceworkers, pero detodas maneras lo dejare asi).
