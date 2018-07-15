@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 // Estilos globales para toda la aplicacion
 import './index.css';
@@ -25,16 +24,11 @@ setTimeout(() => console.log(store.getState()), 2000)
 ReactDOM.render(
 	<HashRouter>
 		<Route render={({ location }) => (
-			<App>	
-				<TransitionGroup>
-					<CSSTransition key={location.key} timeout={400} classNames="fade">
-						<Switch location={location}>
-							<Route exact path='/' component={ Discover }/>
-							<Route path='/movie/:id' component={ Movie }/>
-						</Switch>
-					</CSSTransition>
-					
-				</TransitionGroup>
+			<App>					
+				<Switch location={location}>
+					<Route exact path='/' component={ Discover }/>
+					<Route path='/movie/:id' component={ Movie }/>
+				</Switch>				
 			</App>
 			)}
 		/>

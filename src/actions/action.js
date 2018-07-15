@@ -8,11 +8,7 @@ const LANG = 'es'
 export default function(type, host, path, params = {}, transform)  {
 	return (dispatch) => {
 		
-		const a = typeof params === 'string' ? params.substring(1) : queryString.stringify(params)
-
-		console.log("aaa", a)
 		const url = `${host}/${path}?api_key=${API_KEY}&language=${LANG}&${(typeof params === 'string' ? params.substring(1) : queryString.stringify(params))}`		
-
 		const getDataStart = () => ({
 			type: `REQUEST/discover`
 		})
