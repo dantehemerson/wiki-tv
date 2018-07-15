@@ -34,8 +34,8 @@ export default function(type, host, path, params = {}, transform)  {
 				return response.json()
 			})
 			.then(data => {
-				console.log(data)
-				console.log("Executing getDataOk()")
+				// console.log(data)
+				// console.log("Executing getDataOk()")
 				// Los datos ser recibieron y se colocan en el store
 				dispatch(getDataOk(data))
 			})

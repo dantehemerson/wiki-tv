@@ -11,13 +11,10 @@ import Discover from './components/Discover/Discover';
 import Movie from './components/Movie/Movie';
 
 import store from './store'
-import { getDiscoverMovies } from './actions'
+import { getMovies } from './actions'
 import registerServiceWorker from './registerServiceWorker';
 
-store.dispatch(getDiscoverMovies())
-console.log(store.getState())
-
-setTimeout(() => console.log(store.getState()), 2000)
+store.dispatch(getMovies())
 
 ReactDOM.render(
 	<Provider store={store}>
