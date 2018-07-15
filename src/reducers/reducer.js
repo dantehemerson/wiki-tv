@@ -1,3 +1,4 @@
+/** Este es un creador de reducers, crea un campo y su reducer con el @param type  **/
 export default (type, initialData) => (
 	state = {
 		loading: true, 

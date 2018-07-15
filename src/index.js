@@ -18,6 +18,7 @@ import { getDiscoverMovies } from './actions'
 import registerServiceWorker from './registerServiceWorker';
 
 store.dispatch(getDiscoverMovies())
+console.log(store.getState())
 
 setTimeout(() => console.log(store.getState()), 2000)
 

@@ -9,6 +9,11 @@ export default function(page, path)  {
 	return (dispatch) => {
 
 		const url = `${HOST}/${path}?api_key=${API_KEY}&language=${LANG}&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`				
+
+		const getDataOk = payload => ({
+			type: `OK/discover`,
+			payload
+		})
 		
 		const fetchDataWithRetry = delay => fetch(url)
 			.then(response => {
@@ -21,6 +26,9 @@ export default function(page, path)  {
 			})
 			.then(data => {
 				console.log(data)
+				console.log("Executing getDataOk()")
+				dispatch(getDataOk(data))
+
 			})
 			.catch(e => {
 				console.log(e)				
