@@ -1,5 +1,7 @@
+import queryString from 'query-string'
 import fetch from 'isomorphic-fetch'
 
+ 
 const API_KEY = '954c577b7ec500b5c660c0212e03029f'
 const IMAGES_HOST = 'http://image.tmdb.org/t/p'
 const LANG = 'es'
@@ -7,8 +9,11 @@ const LANG = 'es'
 
 export default function(type, host, path, params = {}, transform)  {
 	return (dispatch) => {
+		console.log("Params ")
+		const a = typeof params === 'string' ? params.substring(1) : queryString.stringify(params)
 
-		const url = `${host}/${path}?api_key=${API_KEY}&language=${LANG}&sort_by=popularity.desc&include_adult=false&include_video=false&page=3`				
+		console.log("aaa", a)
+		const url = `${host}/${path}?api_key=${API_KEY}&language=${LANG}&sort_by=popularity.desc&include_adult=false&include_video=false&page=3`		
 
 		const getDataStart = () => ({
 			type: `REQUEST/discover`
