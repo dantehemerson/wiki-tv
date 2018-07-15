@@ -1,3 +1,5 @@
 import action from './action'
 
-export const getDiscoverMovies = () => action(1, 'discover/movie')
+const HOST = 'https://api.themoviedb.org/3'
+
+export const getDiscoverMovies = () => action('discover', HOST, 'discover/movie')
