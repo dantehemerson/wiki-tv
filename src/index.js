@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import { HashRouter, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux'
 
 // Estilos globales para toda la aplicacion
 import './index.css';
@@ -10,10 +10,8 @@ import App from './components/App/App';
 import Discover from './components/Discover/Discover';
 import Movie from './components/Movie/Movie';
 
-
 import store from './store'
 import { getDiscoverMovies } from './actions'
-
 import registerServiceWorker from './registerServiceWorker';
 
 store.dispatch(getDiscoverMovies())
@@ -22,17 +20,19 @@ console.log(store.getState())
 setTimeout(() => console.log(store.getState()), 2000)
 
 ReactDOM.render(
-	<HashRouter>
-		<Route render={({ location }) => (
-			<App>					
-				<Switch location={location}>
-					<Route exact path='/' component={ Discover }/>
-					<Route path='/movie/:id' component={ Movie }/>
-				</Switch>				
-			</App>
-			)}
-		/>
-	</HashRouter>
+	<Provider store={store}>
+		<HashRouter>
+			<Route render={({ location }) => (
+				<App>					
+					<Switch location={location}>
+						<Route exact path='/' component={ Discover }/>
+						<Route path='/movie/:id' component={ Movie }/>
+					</Switch>				
+				</App>
+				)}
+			/>
+		</HashRouter>
+	</Provider>
 	, document.getElementById('root')
 );
 
