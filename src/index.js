@@ -19,6 +19,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 store.dispatch(getDiscoverMovies())
 
+setTimeout(() => console.log(store.getState()), 2000)
+
 ReactDOM.render(
 	<HashRouter>
 		<Route render={({ location }) => (

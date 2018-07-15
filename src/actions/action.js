@@ -7,18 +7,26 @@ const LANG = 'es'
 
 export default function(page, path)  {
 	return (dispatch) => {
-		const url = `${HOST}/${path}?api_key=${API_KEY}&language=${LANG}&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`		
-		console.log("La url es : ", url)		
-		// Acá se puede dispatchear
-		return {
-			movie1: {
-				title: "Movie 1",
-				year: 2018
-			},
-			movie1: {
-				title: "Movie 1",
-				year: 2018
-			}
-		}
+
+		const url = `${HOST}/${path}?api_key=${API_KEY}&language=${LANG}&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`				
+		
+		const fetchDataWithRetry = delay => fetch(url)
+			.then(response => {
+				if(!response.ok) {
+					if(response.status >= 400 && response.status < 500) {						
+						throw new Error('Bad response from server')
+					}			
+				}
+				return response.json()
+			})
+			.then(data => {
+				console.log(data)
+			})
+			.catch(e => {
+				console.log(e)				
+			})
+
+		// Si es hay un error volverá a pedir los datos luego de n ms
+		return fetchDataWithRetry(4000)			
 	}
 }
