@@ -11,7 +11,13 @@ import App from './components/App/App';
 import Discover from './components/Discover/Discover';
 import Movie from './components/Movie/Movie';
 
+
+import store from './store'
+import { getDiscoverMovies } from './actions'
+
 import registerServiceWorker from './registerServiceWorker';
+
+store.dispatch(getDiscoverMovies())
 
 ReactDOM.render(
 	<HashRouter>
