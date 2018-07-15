@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch'
 
 const API_KEY = '954c577b7ec500b5c660c0212e03029f'
 const HOST = 'https://api.themoviedb.org/3'
-const IMAGES_HOST = 'http://image.tmdb.org/t/p/'
+const IMAGES_HOST = 'http://image.tmdb.org/t/p'
 const LANG = 'es'
 
 export default function(page, path)  {
