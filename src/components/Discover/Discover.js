@@ -4,10 +4,10 @@ import { connect } from 'react-redux'
 import { getMovies } from '../../actions'
 
 class Discover extends Component {
-	render() {		
+	render() {				
 		return (
 			<div>				
-				<Movies movies={this.props.results}/>
+				<Movies movies={this.props.discover.data}/>
 			</div>
 		);
 	}
