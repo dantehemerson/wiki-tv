@@ -9,7 +9,7 @@ class Discover extends Component {
 			<div>				
 				<Movies movies={this.props.discover.data}/>
 			</div>
-		);
+		)
 	}
 }
 
